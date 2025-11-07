@@ -40,6 +40,7 @@ body {
 .navegacao-container {
   margin-left: 150px;
   transition: 0.8s;
+  padding: 32px;
 }
 
 img {
