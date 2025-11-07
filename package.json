@@ -1,0 +1,20 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "Slider feito em JavaScript",
+  "homepage": "https://github.com/RafaelSilvaScrippter/Slider-Js#readme",
+  "bugs": {
+    "url": "https://github.com/RafaelSilvaScrippter/Slider-Js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelSilvaScrippter/Slider-Js.git"
+  },
+  "license": "ISC",
+  "author": "Rafa Silva",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

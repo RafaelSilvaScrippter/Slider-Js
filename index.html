@@ -3,12 +3,37 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slider</title>
 </head>
 
 <body>
-
+  <nav class="navegacao-thumb">
+    <ul>
+      <li data-lista-navegacao><img src="./img/foto1-thumb.jpg" alt="Foto de uma raposa"></li>
+      <li data-lista-navegacao><img src="./img/foto2-thumb.jpg" alt="Foto de um esquilo"></li>
+      <li data-lista-navegacao><img src="./img/foto3-thumb.jpg" alt="Foto de um urso"></li>
+      <li data-lista-navegacao><img src="./img/foto4-thumb.jpg" alt="Foto de um lobo"></li>
+      <li data-lista-navegacao><img src="./img/foto5-thumb.jpg" alt="Foto de um macaco"></li>
+      <li data-lista-navegacao><img src="./img/foto6-thumb.jpg" alt="Foto de um leao"></li>
+    </ul>
+  </nav>
+  <div data-container-pai class="container-div">
+    <ul data-container-ul-lista class="navegacao-container">
+      <li><img data-img src="./img/foto1.jpg" alt="Raposa"></li>
+      <li><img src="./img/foto2.jpg" alt="esquilo"></li>
+      <li><img src="./img/foto3.jpg" alt="urso"></li>
+      <li><img src="./img/foto4.jpg" alt="Lobo"></li>
+      <li><img src="./img/foto5.jpg" alt="Macao"></li>
+      <li><img src="./img/foto6.jpg" alt="Leao"></li>
+    </ul>
+    <div class="botao-navegacao">
+      <button data-anterior><img src="./img/arrow.svg" alt=""></button>
+      <button data-proximo><img src="./img/arrow.svg" alt=""></button>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
 </body>
 
 </html>
