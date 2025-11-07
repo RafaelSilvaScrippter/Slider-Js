@@ -21,6 +21,7 @@ class Slider {
     this.arrastarMouse = this.arrastarMouse.bind(this);
     this.soltar = this.soltar.bind(this);
     this.segurando = false;
+    this.clientX = 0;
   }
 
   navegarImg() {
@@ -33,8 +34,10 @@ class Slider {
   }
 
   arrastarMouse(event) {
-    console.log(event.x);
-    this.containerUl.style.transform = `translateX(-${event.x}px)`;
+    let clickado = this.containerUl.getBoundingClientRect().left;
+    this.containerUl.style.transform = `translateX(-${
+      event.x * clickado * 0.6
+    }px)`;
   }
 
   moverSlideArrastando(event) {
@@ -61,6 +64,7 @@ class Slider {
       this.innerWidthImg * this.indexClicado + 220
     }px)`;
     this.imagemAoCentrolDaTela();
+    this.classeNav();
   }
 
   anterior() {
@@ -82,10 +86,30 @@ class Slider {
     this.dataAnterior.addEventListener("click", this.anterior);
   }
 
+  classeNav() {
+    this.listaNavegacao.forEach((img) => {
+      img.style.opacity = "0.6";
+      this.listaNavegacao[this.indexClicado].style.opacity = "1";
+    });
+  }
+
   dragSlide() {
     this.containerUl.addEventListener("mousedown", this.moverSlideArrastando);
     this.containerUl.addEventListener("mouseup", this.soltar);
     this.containerUl.addEventListener("mouseleave", this.soltar);
+    this.widthImg.forEach((img, index) => {
+      img.addEventListener("mouseup", (event) => {
+        this.clickImagemCarrosel(event);
+      });
+    });
+  }
+
+  clickImagemCarrosel(event) {
+    if (event.clientX > 500 && this.indexClicado < 6) {
+      this.proximo();
+    } else {
+      this.anterior();
+    }
   }
 
   soltar() {
@@ -97,6 +121,7 @@ class Slider {
     this.botaoClick();
     this.navegarImg();
     this.dragSlide();
+    this.classeNav();
   }
 }
 
