@@ -39,6 +39,15 @@ body {
 
 .navegacao-container {
   margin-left: 150px;
+  transition: 0.8s;
+}
+
+img {
+  scale: 0.8;
+}
+
+img.ativo {
+  scale: 1.1;
 }
 
 .navegacao-container li img {

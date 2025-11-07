@@ -4,7 +4,7 @@ const sliderInit = new Slider(
   "[data-lista-navegacao]",
   "[data-container-pai]",
   "[data-container-ul-lista]",
-  "[data-anterior]",
-  "[data-proximo]"
+  "[data-proximo]",
+  "[data-anterior]"
 );
 sliderInit.init();
